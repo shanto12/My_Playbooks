@@ -7,7 +7,6 @@
             "clean": true,
             "code_block": "",
             "description": "",
-            "hash": "217ec3f7fec150ebf3ac39e3539948b1a4e72c02",
             "joint": {
                 "cells": [
                     {
@@ -1306,7 +1305,7 @@
                                 "opacity": 1
                             },
                             "g.delete": {
-                                "display": "block"
+                                "display": "none"
                             },
                             "g.error": {
                                 "opacity": 0
