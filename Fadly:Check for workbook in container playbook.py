@@ -49,15 +49,7 @@ def Get_workflow_name(action=None, success=None, container=None, results=None, h
         'verify_certificate': False,
     })
 
-    phantom.act("get data", parameters=parameters, assets=['http01'], callback=Get_workflow_name_callback, name="Get_workflow_name")
-
-    return
-
-def Get_workflow_name_callback(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):
-    phantom.debug('Get_workflow_name_callback() called')
-    
-    Check_if_container_already_have_workbook(action=action, success=success, container=container, results=results, handle=handle)
-    custom_function_1(action=action, success=success, container=container, results=results, handle=handle)
+    phantom.act("get data", parameters=parameters, assets=['http01'], callback=Check_if_container_already_have_workbook, name="Get_workflow_name")
 
     return
 
@@ -112,22 +104,6 @@ def Comment_Container_has_no_workbook(action=None, success=None, container=None,
     phantom.debug('Comment_Container_has_no_workbook() called')
 
     phantom.comment(container=container, comment="Container has a workbook.")
-
-    return
-
-def custom_function_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):
-    phantom.debug('custom_function_1() called')
-    input_parameter_0 = ""
-
-    ################################################################################
-    ## Custom Code Start
-    ################################################################################
-
-    # Write your custom code here...
-
-    ################################################################################
-    ## Custom Code End
-    ################################################################################
 
     return
 
