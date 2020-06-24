@@ -93,7 +93,7 @@ Comment Container has a workbook
 def API_Comment_Has_Workbook_Yes(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):
     phantom.debug('API_Comment_Has_Workbook_Yes() called')
 
-    phantom.comment(container=container, comment="Container has a workbook, proceed to add workbook.")
+    phantom.comment(container=container, comment="Container has a workbook assigned to it.")
 
     return
 
@@ -103,7 +103,7 @@ Comment Container has no workbook
 def API_Comment_Has_Workbook_No(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None):
     phantom.debug('API_Comment_Has_Workbook_No() called')
 
-    phantom.comment(container=container, comment="Container doesn't have a workbook.")
+    phantom.comment(container=container, comment="Container doesn't have a workbook. Proceed to add workbook.")
 
     return
 
